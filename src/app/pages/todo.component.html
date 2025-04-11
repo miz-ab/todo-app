@@ -1,0 +1,30 @@
+<div class="todo-container">
+    <h2>Add New Task</h2>
+  
+    <div class="form-group">
+      <input
+        type="text"
+        [(ngModel)]="taskName"
+        placeholder="Enter task name"
+        class="task-input"
+      />
+    </div>
+  
+    <div class="button-group">
+      <button (click)="saveTask()" class="btn save">Save</button>
+      <button (click)="cancel()" class="btn cancel">Cancel</button>
+    </div>
+  
+    <div *ngIf="todos$ | async as todos">
+      <h3>To-Do List</h3>
+      <ul>
+        <li *ngFor="let todo of todos">
+          <span [class.completed]="todo.completed">{{ todo.title }}</span>
+          <button (click)="toggleTask(todo.id)" class="btn toggle">
+            {{ todo.completed ? 'Undo' : 'Complete' }}
+          </button>
+          <button (click)="removeTask(todo.id)" class="btn remove">Remove</button>
+        </li>
+      </ul>
+    </div>
+  </div>  

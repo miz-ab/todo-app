@@ -1,0 +1,78 @@
+.todo-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+  
+    h2 {
+      text-align: center;
+    }
+  
+    .form-group {
+      margin-bottom: 12px;
+    }
+  
+    .task-input {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+    }
+  
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+  
+      .btn {
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+  
+        &.save {
+          background-color: #4caf50;
+          color: white;
+        }
+  
+        &.cancel {
+          background-color: #f44336;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .todo-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-container li {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button.toggle {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button.remove {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  
